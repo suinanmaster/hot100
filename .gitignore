@@ -1,0 +1,163 @@
+# ======================================
+# Python 项目专用 .gitignore 完整版
+# 适配：纯Python项目、Django/Flask/FastAPI、数据分析/机器学习项目
+# ======================================
+
+# --------------------------
+# 1. Python 编译/缓存文件
+# --------------------------
+# 字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+# C 扩展编译文件
+*.so
+# Python 缓存目录
+.Python
+# 类型检查缓存
+.mypy_cache/
+.dmypy.json
+dmypy.json
+# 文档生成缓存
+.sphinx_build/
+
+# --------------------------
+# 2. 虚拟环境 & 依赖目录
+# --------------------------
+# 通用虚拟环境
+venv/
+env/
+.venv/
+.env/
+# pip 环境
+pip-wheel-metadata/
+# Poetry 依赖环境
+.poetry/
+# Pipenv 环境
+Pipfile.lock
+# 全局依赖安装目录
+lib/
+lib64/
+bin/
+include/
+share/
+# 机器学习/数据分析专用环境
+.venv3/
+.conda/
+
+# --------------------------
+# 3. 包构建/分发文件
+# --------------------------
+# 打包输出目录
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+# 包信息文件
+*.egg-info/
+.installed.cfg
+*.egg
+# PyPI 上传缓存
+*.pyc
+
+# --------------------------
+# 4. 测试、覆盖率 & 日志
+# --------------------------
+# 测试工具缓存
+.pytest_cache/
+.nose2/
+.tox/
+# 覆盖率报告
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+# 日志文件
+*.log
+logs/
+# 临时测试文件
+test-results/
+junit.xml
+
+# --------------------------
+# 5. 环境变量 & 敏感配置
+# --------------------------
+# 本地环境变量（核心：绝对不能提交！）
+.env
+.env.local
+.env.*.local
+# 密钥/配置文件
+secrets.json
+config.json
+settings.ini
+
+# --------------------------
+# 6. 数据库 & 数据文件
+# --------------------------
+# 本地数据库
+*.db
+*.sqlite
+*.sqlite3
+# 数据分析临时数据
+*.csv
+*.xlsx
+*.parquet
+*.h5
+# 机器学习模型文件
+*.pkl
+*.pt
+*.pth
+*.h5
+models/
+checkpoints/
+
+# --------------------------
+# 7. IDE / 编辑器 配置
+# --------------------------
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# Vim
+*.swp
+*.swo
+# Eclipse
+.pydevproject
+.project
+
+# --------------------------
+# 8. 操作系统 自动生成文件
+# --------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+# Linux
+*~
+.directory
+
+# --------------------------
+# 9. 临时文件/目录
+# --------------------------
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
