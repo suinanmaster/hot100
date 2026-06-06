@@ -1,0 +1,58 @@
+"""
+https://leetcode.cn/problems/move-zeroes/description/?envType=study-plan-v2&envId=top-100-liked
+
+283. 移动零
+提示
+给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
+
+请注意 ，必须在不复制数组的情况下原地对数组进行操作。
+
+
+
+示例 1:
+
+输入: nums = [0,1,0,3,12]
+输出: [1,3,12,0,0]
+示例 2:
+
+输入: nums = [0]
+输出: [0]
+
+
+提示:
+
+1 <= nums.length <= 104
+-231 <= nums[i] <= 231 - 1
+
+
+进阶：你能尽量减少完成的操作次数吗？
+"""
+
+from typing import List
+
+## upgrade
+
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        left = 0
+        for right in range(len(nums)):
+            if nums[right] != 0:
+                nums[left], nums[right] = nums[right], nums[left]
+                left += 1
+
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        ans = []
+        zero_num = 0
+        for num in nums:
+            if num != 0:
+                ans.append(num)
+            else:
+                zero_num += 1
+        ans.extend((zero_num * [0]))
+        nums[:] = ans
